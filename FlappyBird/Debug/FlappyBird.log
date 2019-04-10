@@ -1,2 +1,20 @@
-﻿  AssetManager.cpp
+﻿  InputManager.cpp
+d:\sfml_flappybird\flappybird\flappybird\inputmanager.cpp(10): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+          and
+          [
+              T=int
+          ]
+d:\sfml_flappybird\flappybird\flappybird\inputmanager.cpp(9): warning C4244: 'argument': conversion from 'const T' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+          and
+          [
+              T=int
+          ]
   FlappyBird.vcxproj -> D:\SFML_FlappyBird\FlappyBird\Debug\FlappyBird.exe
