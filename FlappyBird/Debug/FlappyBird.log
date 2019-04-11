@@ -1,6 +1,5 @@
-﻿  GameState.cpp
+﻿  GameOverState.cpp
 d:\sfml_flappybird\flappybird\flappybird\game.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-d:\sfml_flappybird\flappybird\flappybird\gamestate.cpp(96): warning C4018: '<': signed/unsigned mismatch
-d:\sfml_flappybird\flappybird\flappybird\gamestate.cpp(106): warning C4018: '<': signed/unsigned mismatch
-d:\sfml_flappybird\flappybird\flappybird\gamestate.cpp(118): warning C4018: '<': signed/unsigned mismatch
+d:\sfml_flappybird\flappybird\flappybird\gameoverstate.cpp(32): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+d:\sfml_flappybird\flappybird\flappybird\gameoverstate.cpp(35): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   FlappyBird.vcxproj -> D:\SFML_FlappyBird\FlappyBird\Debug\FlappyBird.exe

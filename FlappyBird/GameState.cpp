@@ -98,6 +98,8 @@ namespace FlappyBird
 				if (collision.checkSpriteCollision(bird->getSprite(), 0.7f, landSprites.at(i), 1.0f))
 				{
 					gameState_ = GameStates::eGameOver;
+
+					clock_.restart();
 				}
 			}
 
@@ -108,6 +110,8 @@ namespace FlappyBird
 				if (collision.checkSpriteCollision(bird->getSprite(), 0.625f, pipeSprites.at(i), 1.0f))
 				{
 					gameState_ = GameStates::eGameOver;
+
+					clock_.restart();
 				}
 			}
 
@@ -132,6 +136,11 @@ namespace FlappyBird
 		if (GameStates::eGameOver == gameState_)
 		{
 			flash->show(dt);
+
+			if (clock_.getElapsedTime().asSeconds() > TIME_BEFORE_GAME_OVER_APPEARS)
+			{
+				data_->machine.addState(StateRef(new GameOverState(data_)), true);
+			}
 		}
 	}
 

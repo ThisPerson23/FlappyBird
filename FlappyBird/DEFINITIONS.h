@@ -25,7 +25,10 @@
 #define BIRD_FRAME_3_FILEPATH "Resources/res/bird-03.png"
 #define BIRD_FRAME_4_FILEPATH "Resources/res/bird-04.png"
 
-#define FLAPPY_FONT_FILEPATH "Resources/fonts/FlappyFont.ttf"
+#define FLAPPY_FONT_FILEPATH "Resources/fonts/FlappyFont.ttf"\
+
+#define GAME_OVER_TITLE_FILEPATH "Resources/res/Game-Over-Title.png"
+#define GAME_OVER_BODY_FILEPATH "Resources/res/Game-Over-Body.png"
 
 #define PIPE_MOVEMENT_SPEED 200.f
 #define PIPE_SPAWN_FREQUENCY 2.f
@@ -51,3 +54,5 @@ enum GameStates
 };
 
 #define FLASH_SPEED 1500.f
+
+#define TIME_BEFORE_GAME_OVER_APPEARS 1.5f

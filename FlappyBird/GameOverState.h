@@ -22,5 +22,9 @@ namespace FlappyBird
 		GameDataRef data_;
 
 		sf::Sprite	backgroundSprite_;
+
+		sf::Sprite	gameOverTitleSprite_;
+		sf::Sprite	gameOverContainerSprite_;
+		sf::Sprite	retryButtonSprite_;
 	};
 }
