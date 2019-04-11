@@ -149,7 +149,7 @@ namespace FlappyBird
 
 					clock_.restart();
 
-					gameTune_.pause();
+					gameTune_.stop();
 
 					hitSound_.play();
 				}
@@ -165,7 +165,7 @@ namespace FlappyBird
 
 					clock_.restart();
 
-					gameTune_.pause();
+					gameTune_.stop();
 
 					hitSound_.play();
 				}
