@@ -5,6 +5,7 @@
 #include "State.h"
 #include "Game.h"
 #include "Pipe.h"
+#include "Land.h"
 
 namespace FlappyBird
 {
@@ -25,6 +26,7 @@ namespace FlappyBird
 		sf::Sprite	backgroundSprite_;
 
 		Pipe* pipe;
+		Land* land;
 
 		sf::Clock clock_;
 	};

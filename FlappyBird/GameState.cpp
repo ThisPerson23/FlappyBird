@@ -17,12 +17,14 @@ namespace FlappyBird
 		std::cout << "Game State" << std::endl;
 
 		data_->assets.loadTexture("Game Background", GAME_BACKGROUND_FILEPATH);
-		backgroundSprite_.setTexture(this->data_->assets.getTexture("Game Background"));
-
-		pipe = new Pipe(data_);
-
 		data_->assets.loadTexture("Pipe Up", PIPE_UP_FILEPATH);
 		data_->assets.loadTexture("Pipe Down", PIPE_DOWN_FILEPATH);
+		data_->assets.loadTexture("Land", LAND_FILEPATH);
+
+		pipe = new Pipe(data_);
+		land = new Land(data_);
+
+		backgroundSprite_.setTexture(this->data_->assets.getTexture("Game Background"));
 	}
 
 	void GameState::handleInput()
@@ -46,6 +48,7 @@ namespace FlappyBird
 	void GameState::update(float dt)
 	{
 		pipe->movePipes(dt);
+		land->moveLand(dt);
 
 		if (clock_.getElapsedTime().asSeconds() > PIPE_SPAWN_FREQUENCY)
 		{
@@ -64,6 +67,7 @@ namespace FlappyBird
 		data_->window.clear();
 		data_->window.draw(backgroundSprite_);
 		pipe->drawPipes();
+		land->drawLand();
 		data_->window.display();
 	}
 }

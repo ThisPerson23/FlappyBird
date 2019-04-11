@@ -48,7 +48,7 @@ namespace FlappyBird
 			{ 
 				float movement = PIPE_MOVEMENT_SPEED * dt;
 
-				pipeSprites_.at(i).move(-movement, 0);
+				pipeSprites_.at(i).move(-movement, 0.f);
 			}
 		}
 
