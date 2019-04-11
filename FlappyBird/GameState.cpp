@@ -40,6 +40,18 @@ namespace FlappyBird
 		pointSound_.setBuffer(pointSoundBuffer_);
 		pointSound_.setVolume(10.f);
 
+		if (!gameTune_.openFromFile(data_->assets.getMusic("Game Tune")))
+		{
+			std::cout << "Error Loading Game Tune Music" << std::endl;
+		}
+
+		if (!data_->assets.getIsMusicPaused())
+		{
+			gameTune_.setVolume(10.f);
+			gameTune_.setLoop(true);
+			gameTune_.play();
+		}
+
 		data_->assets.loadFont("Flappy Font", FLAPPY_FONT_FILEPATH);
 
 		data_->assets.loadTexture("Game Background", GAME_BACKGROUND_FILEPATH);
@@ -86,6 +98,18 @@ namespace FlappyBird
 					wingSound_.play();
 				}
 			}
+
+			if (sf::Event::KeyPressed == event.type && event.key.code == sf::Keyboard::Escape)
+			{
+				std::cout << "Escape Button Pressed" << std::endl;
+
+				if (!data_->assets.getIsMusicPaused())
+				{
+					gameTune_.stop();
+				}
+
+				data_->machine.addState(StateRef(new MainMenuState(data_)), true);
+			}
 		}
 	}
 
@@ -125,6 +149,8 @@ namespace FlappyBird
 
 					clock_.restart();
 
+					gameTune_.pause();
+
 					hitSound_.play();
 				}
 			}
@@ -138,6 +164,8 @@ namespace FlappyBird
 					gameState_ = GameStates::eGameOver;
 
 					clock_.restart();
+
+					gameTune_.pause();
 
 					hitSound_.play();
 				}

@@ -12,7 +12,6 @@ namespace FlappyBird
 	{
 	public:
 		MainMenuState(GameDataRef data);
-		//~MainMenuState();
 
 		void init();
 
@@ -26,7 +25,8 @@ namespace FlappyBird
 		sf::Sprite	backgroundSprite_;
 		sf::Sprite	titleSprite_;
 		sf::Sprite	playButtonSprite_;
+		sf::Sprite  muteMusicButtonSprite_;
 
-		//sf::Music	gameTune_;
+		sf::Music	gameTune_;
 	};
 }

@@ -1,8 +1,8 @@
 ﻿  GameState.cpp
 d:\sfml_flappybird\flappybird\flappybird\game.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-d:\sfml_flappybird\flappybird\flappybird\gamestate.cpp(120): warning C4018: '<': signed/unsigned mismatch
-d:\sfml_flappybird\flappybird\flappybird\gamestate.cpp(134): warning C4018: '<': signed/unsigned mismatch
-d:\sfml_flappybird\flappybird\flappybird\gamestate.cpp(150): warning C4018: '<': signed/unsigned mismatch
+d:\sfml_flappybird\flappybird\flappybird\gamestate.cpp(144): warning C4018: '<': signed/unsigned mismatch
+d:\sfml_flappybird\flappybird\flappybird\gamestate.cpp(160): warning C4018: '<': signed/unsigned mismatch
+d:\sfml_flappybird\flappybird\flappybird\gamestate.cpp(178): warning C4018: '<': signed/unsigned mismatch
   MainMenuState.cpp
 d:\sfml_flappybird\flappybird\flappybird\game.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   SplashState.cpp

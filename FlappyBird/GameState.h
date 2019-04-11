@@ -51,5 +51,7 @@ namespace FlappyBird
 		sf::Sound			hitSound_;
 		sf::Sound			wingSound_;
 		sf::Sound			pointSound_;
+
+		sf::Music			gameTune_;
 	};
 }

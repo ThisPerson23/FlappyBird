@@ -12,6 +12,7 @@
 
 #define GAME_TITLE_FILEPATH "Resources/res/title.png"
 #define PLAY_BUTTON_FILEPATH "Resources/res/PlayButton.png"
+#define MUTE_MUSIC_BUTTON_FILEPATH "Resources/res/MuteMusicButton.png"
 
 #define PIPE_UP_FILEPATH "Resources/res/PipeUp.png"
 #define PIPE_DOWN_FILEPATH "Resources/res/PipeDown.png"

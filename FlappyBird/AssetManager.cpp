@@ -31,4 +31,29 @@ namespace FlappyBird
 	{
 		return this->fonts_.at(name);
 	}
+
+	void AssetManager::loadMusic(std::string name, std::string fileName)
+	{
+		this->music_[name] = fileName;
+	}
+
+	std::string AssetManager::getMusic(std::string name)
+	{
+		return this->music_.at(name);
+	}
+
+	void AssetManager::setIsMusicPaused(bool isPaused)
+	{
+		this->isMusicPaused_ = isPaused;
+	}
+
+	bool AssetManager::getIsMusicPaused() const
+	{
+		return this->isMusicPaused_;
+	}
+
+	/*void AssetManager::playMusic(std::string name)
+	{
+		if (!music_.openFro)
+	}*/
 }
