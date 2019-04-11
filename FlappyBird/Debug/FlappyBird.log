@@ -1,3 +1,10 @@
-﻿  GameState.cpp
+﻿  GameOverState.cpp
 d:\sfml_flappybird\flappybird\flappybird\game.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  GameState.cpp
+d:\sfml_flappybird\flappybird\flappybird\game.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  MainMenuState.cpp
+d:\sfml_flappybird\flappybird\flappybird\game.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  SplashState.cpp
+d:\sfml_flappybird\flappybird\flappybird\game.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Generating Code...
   FlappyBird.vcxproj -> D:\SFML_FlappyBird\FlappyBird\Debug\FlappyBird.exe

@@ -14,6 +14,8 @@ namespace FlappyBird
 
 	void MainMenuState::init()
 	{
+		std::cout << "Main Menu State" << std::endl;
+
 		//Background
 		data_->assets.loadTexture("Main Menu Background", MAIN_MENU_BACKGROUND_FILEPATH);
 		backgroundSprite_.setTexture(this->data_->assets.getTexture("Main Menu Background"));
@@ -44,6 +46,7 @@ namespace FlappyBird
 
 			if (data_->input.isSpriteClicked(playButtonSprite_, sf::Mouse::Left, data_->window))
 			{
+				std::cout << "Main Menu Play Button Clicked" << std::endl;
 				data_->machine.addState(StateRef(new GameState(data_)), true);
 			}
 		}

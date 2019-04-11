@@ -14,6 +14,8 @@ namespace FlappyBird
 
 	void SplashState::init()
 	{
+		std::cout << "Splash Screen State" << std::endl;
+
 		data_->assets.loadTexture("Splash State Background", SPLASH_SCENE_BACKGROUND_FILEPATH);
 		backgroundSprite_.setTexture(this->data_->assets.getTexture("Splash State Background"));
 	}

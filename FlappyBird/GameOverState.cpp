@@ -1,26 +1,25 @@
 #include <sstream>
 #include <iostream>
 
-#include "GameState.h"
 #include "GameOverState.h"
 
 #include "DEFINITIONS.h"
 
 namespace FlappyBird
 {
-	GameState::GameState(GameDataRef data)
+	GameOverState::GameOverState(GameDataRef data)
 		: data_(data)
 	{}
 
-	void GameState::init()
+	void GameOverState::init()
 	{
-		std::cout << "Game State" << std::endl;
+		std::cout << "Game Over State" << std::endl;
 
-		data_->assets.loadTexture("Game Background", GAME_BACKGROUND_FILEPATH);
-		backgroundSprite_.setTexture(this->data_->assets.getTexture("Game Background"));
+		data_->assets.loadTexture("Game Over Background", GAME_OVER_BACKGROUND_FILEPATH);
+		backgroundSprite_.setTexture(this->data_->assets.getTexture("Game Over Background"));
 	}
 
-	void GameState::handleInput()
+	void GameOverState::handleInput()
 	{
 		sf::Event event;
 
@@ -33,10 +32,10 @@ namespace FlappyBird
 		}
 	}
 
-	void GameState::update(float dt)
+	void GameOverState::update(float dt)
 	{}
 
-	void GameState::draw(float dt)
+	void GameOverState::draw(float dt)
 	{
 		data_->window.clear();
 		data_->window.draw(backgroundSprite_);
