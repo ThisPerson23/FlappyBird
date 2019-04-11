@@ -1,7 +1,9 @@
-﻿  Game.cpp
+﻿  AssetManager.cpp
+  Game.cpp
 d:\sfml_flappybird\flappybird\flappybird\game.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   Source.cpp
 d:\sfml_flappybird\flappybird\flappybird\game.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  StateMachine.cpp
+  SplashState.cpp
+d:\sfml_flappybird\flappybird\flappybird\game.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   Generating Code...
   FlappyBird.vcxproj -> D:\SFML_FlappyBird\FlappyBird\Debug\FlappyBird.exe

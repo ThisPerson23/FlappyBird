@@ -1,10 +1,7 @@
-#include <iostream>
-
 #include "Game.h"
+#include "DEFINITIONS.h"
 
 int main()
 {
-	FlappyBird::Game(800, 600, "Flappy Bird");
-
-	return EXIT_SUCCESS;
+	FlappyBird::Game(SCREEN_WIDTH, SCREEN_HEIGHT, "Flappy Bird");
 }

@@ -31,7 +31,7 @@ namespace FlappyBird
 
 	private:
 		const float dt = 1.0f / 60.0f;
-		sf::Clock clock_;
+		sf::Clock	clock_;
 
 		GameDataRef data_ = std::make_shared<GameData>();
 	};

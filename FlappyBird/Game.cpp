@@ -1,4 +1,5 @@
 #include "Game.h"
+#include "SplashState.h"
 
 namespace FlappyBird
 {
@@ -6,7 +7,7 @@ namespace FlappyBird
 	{
 		data_->window.create(sf::VideoMode(width, height), title, sf::Style::Close | sf::Style::Titlebar);
 
-
+		data_->machine.addState(StateRef(new SplashState(this->data_)));
 
 		this->run();
 	}
