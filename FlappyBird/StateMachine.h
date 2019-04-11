@@ -7,7 +7,7 @@
 
 namespace FlappyBird
 {
-	typedef std::unique_ptr<State> stateRef;
+	typedef std::unique_ptr<State> StateRef;
 
 	class StateMachine
 	{
@@ -15,17 +15,17 @@ namespace FlappyBird
 		StateMachine() { }
 		~StateMachine() { }
 
-		void addState(stateRef newState, bool isReplacing = true);
+		void addState(StateRef newState, bool isReplacing = true);
 		void removeState();
 
 		void processStateChanges();
 
-		stateRef& getActiveState();
+		StateRef& getActiveState();
 
 
 	private:
-		std::stack<stateRef> states_;
-		stateRef			 newState_;
+		std::stack<StateRef> states_;
+		StateRef			 newState_;
 
 		bool				 isRemoving_;
 		bool				 isAdding_;

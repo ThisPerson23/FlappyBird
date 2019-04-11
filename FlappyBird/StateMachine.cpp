@@ -2,7 +2,7 @@
 
 namespace FlappyBird
 {
-	void StateMachine::addState(stateRef newState, bool isReplacing)
+	void StateMachine::addState(StateRef newState, bool isReplacing)
 	{
 		this->isAdding_ = true;
 		this->isReplacing_ = isReplacing;
@@ -48,7 +48,7 @@ namespace FlappyBird
 		}
 	}
 
-	stateRef& StateMachine::getActiveState()
+	StateRef& StateMachine::getActiveState()
 	{
 		return this->states_.top();
 	}
