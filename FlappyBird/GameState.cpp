@@ -18,6 +18,11 @@ namespace FlappyBird
 
 		data_->assets.loadTexture("Game Background", GAME_BACKGROUND_FILEPATH);
 		backgroundSprite_.setTexture(this->data_->assets.getTexture("Game Background"));
+
+		pipe = new Pipe(data_);
+
+		data_->assets.loadTexture("Pipe Up", PIPE_UP_FILEPATH);
+		data_->assets.loadTexture("Pipe Down", PIPE_DOWN_FILEPATH);
 	}
 
 	void GameState::handleInput()
@@ -40,6 +45,7 @@ namespace FlappyBird
 	{
 		data_->window.clear();
 		data_->window.draw(backgroundSprite_);
+		pipe->drawPipes();
 		data_->window.display();
 	}
 }

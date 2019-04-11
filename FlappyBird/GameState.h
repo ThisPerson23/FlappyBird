@@ -4,6 +4,7 @@
 
 #include "State.h"
 #include "Game.h"
+#include "Pipe.h"
 
 namespace FlappyBird
 {
@@ -22,5 +23,7 @@ namespace FlappyBird
 		GameDataRef data_;
 
 		sf::Sprite	backgroundSprite_;
+
+		Pipe* pipe;
 	};
 }
