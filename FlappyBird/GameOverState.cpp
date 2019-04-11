@@ -8,8 +8,9 @@
 
 namespace FlappyBird
 {
-	GameOverState::GameOverState(GameDataRef data)
+	GameOverState::GameOverState(GameDataRef data, int score)
 		: data_(data)
+		, score_(score)
 	{}
 
 	void GameOverState::init()
@@ -33,6 +34,20 @@ namespace FlappyBird
 
 		retryButtonSprite_.setPosition((data_->window.getSize().x / 2) - (retryButtonSprite_.getGlobalBounds().width / 2),
 										gameOverContainerSprite_.getPosition().y + gameOverContainerSprite_.getGlobalBounds().height + (retryButtonSprite_.getGlobalBounds().height * 0.2));
+
+		scoreText_.setFont(data_->assets.getFont("Flappy Font"));
+		scoreText_.setString(std::to_string(score_));
+		scoreText_.setCharacterSize(56);
+		scoreText_.setFillColor(sf::Color::White);
+		scoreText_.setOrigin(scoreText_.getGlobalBounds().width / 2, scoreText_.getGlobalBounds().height / 2);
+		scoreText_.setPosition(data_->window.getSize().x / 10 * 7.25, data_->window.getSize().y / 2.15);
+
+		highScoreText_.setFont(data_->assets.getFont("Flappy Font"));
+		highScoreText_.setString(std::to_string(highScore_));
+		highScoreText_.setCharacterSize(56);
+		highScoreText_.setFillColor(sf::Color::White);
+		highScoreText_.setOrigin(highScoreText_.getGlobalBounds().width / 2, highScoreText_.getGlobalBounds().height / 2);
+		highScoreText_.setPosition(data_->window.getSize().x / 10 * 7.25, data_->window.getSize().y / 1.78);
 	}
 
 	void GameOverState::handleInput()
@@ -63,6 +78,8 @@ namespace FlappyBird
 		data_->window.draw(gameOverContainerSprite_);
 		data_->window.draw(gameOverTitleSprite_);
 		data_->window.draw(retryButtonSprite_);
+		data_->window.draw(scoreText_);
+		data_->window.draw(highScoreText_);
 		data_->window.display();
 	}
 }

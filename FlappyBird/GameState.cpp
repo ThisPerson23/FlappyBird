@@ -139,7 +139,7 @@ namespace FlappyBird
 
 			if (clock_.getElapsedTime().asSeconds() > TIME_BEFORE_GAME_OVER_APPEARS)
 			{
-				data_->machine.addState(StateRef(new GameOverState(data_)), true);
+				data_->machine.addState(StateRef(new GameOverState(data_, score_)), true);
 			}
 		}
 	}

@@ -10,7 +10,7 @@ namespace FlappyBird
 	class GameOverState : public State
 	{
 	public:
-		GameOverState(GameDataRef data);
+		GameOverState(GameDataRef data, int score);
 
 		void init();
 
@@ -26,5 +26,11 @@ namespace FlappyBird
 		sf::Sprite	gameOverTitleSprite_;
 		sf::Sprite	gameOverContainerSprite_;
 		sf::Sprite	retryButtonSprite_;
+
+		sf::Text	scoreText_;
+		sf::Text	highScoreText_;
+
+		int			score_;
+		int			highScore_;
 	};
 }
