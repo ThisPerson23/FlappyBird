@@ -18,6 +18,28 @@ namespace FlappyBird
 	{
 		std::cout << "Game State" << std::endl;
 
+		if (!hitSoundBuffer_.loadFromFile(HIT_SOUND_FILEPATH))
+		{
+			std::cout << "Error loading Hit Sound Effect" << std::endl;
+		}
+
+		if (!wingSoundBuffer_.loadFromFile(WING_SOUND_FILEPATH))
+		{
+			std::cout << "Error loading Wing Sound Effect" << std::endl;
+		}
+
+		if (!pointSoundBuffer_.loadFromFile(POINT_SOUND_FILEPATH))
+		{
+			std::cout << "Error loading Point Sound Effect" << std::endl;
+		}
+
+		hitSound_.setBuffer(hitSoundBuffer_);
+		hitSound_.setVolume(10.f);
+		wingSound_.setBuffer(wingSoundBuffer_);
+		wingSound_.setVolume(10.f);
+		pointSound_.setBuffer(pointSoundBuffer_);
+		pointSound_.setVolume(10.f);
+
 		data_->assets.loadFont("Flappy Font", FLAPPY_FONT_FILEPATH);
 
 		data_->assets.loadTexture("Game Background", GAME_BACKGROUND_FILEPATH);
@@ -60,6 +82,8 @@ namespace FlappyBird
 				{ 
 					gameState_ = GameStates::ePlaying;
 					bird->tap();
+
+					wingSound_.play();
 				}
 			}
 		}
@@ -100,6 +124,8 @@ namespace FlappyBird
 					gameState_ = GameStates::eGameOver;
 
 					clock_.restart();
+
+					hitSound_.play();
 				}
 			}
 
@@ -112,6 +138,8 @@ namespace FlappyBird
 					gameState_ = GameStates::eGameOver;
 
 					clock_.restart();
+
+					hitSound_.play();
 				}
 			}
 
@@ -128,6 +156,8 @@ namespace FlappyBird
 						hud->updateScore(score_);
 
 						scoringPipeSprites.erase(scoringPipeSprites.begin() + i);
+
+						pointSound_.play();
 					}
 				}
 			}

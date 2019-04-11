@@ -1,6 +1,7 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 
 #include "State.h"
 #include "Game.h"
@@ -42,5 +43,13 @@ namespace FlappyBird
 		int					gameState_;
 
 		int					score_;
+
+		sf::SoundBuffer		hitSoundBuffer_;
+		sf::SoundBuffer		wingSoundBuffer_;
+		sf::SoundBuffer		pointSoundBuffer_;
+
+		sf::Sound			hitSound_;
+		sf::Sound			wingSound_;
+		sf::Sound			pointSound_;
 	};
 }
