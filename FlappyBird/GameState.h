@@ -25,5 +25,7 @@ namespace FlappyBird
 		sf::Sprite	backgroundSprite_;
 
 		Pipe* pipe;
+
+		sf::Clock clock_;
 	};
 }

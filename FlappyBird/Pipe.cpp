@@ -1,5 +1,7 @@
 #include "Pipe.h"
 
+#include <iostream>
+
 namespace FlappyBird
 {
 	Pipe::Pipe(GameDataRef data)
@@ -38,11 +40,19 @@ namespace FlappyBird
 	{
 		for (unsigned short int i = 0; i < pipeSprites_.size(); i++)
 		{
-			sf::Vector2f position = pipeSprites_.at(i).getPosition();
-			float movement = PIPE_MOVEMENT_SPEED * dt;
+			if (pipeSprites_.at(i).getPosition().x < 0 - pipeSprites_.at(i).getGlobalBounds().width)
+			{
+				pipeSprites_.erase(pipeSprites_.begin() + i);
+			}
+			else
+			{ 
+				float movement = PIPE_MOVEMENT_SPEED * dt;
 
-			pipeSprites_.at(i).move(-movement, 0);
+				pipeSprites_.at(i).move(-movement, 0);
+			}
 		}
+
+		std::cout << pipeSprites_.size() << std::endl;
 	}
 
 	void Pipe::drawPipes()

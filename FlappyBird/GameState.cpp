@@ -39,10 +39,6 @@ namespace FlappyBird
 			if (data_->input.isSpriteClicked(backgroundSprite_, sf::Mouse::Left, data_->window))
 			{
 				std::cout << "Background In Game State Clicked" << std::endl;
-				std::cout << "Pipe Spawned" << std::endl;
-				pipe->spawnInvisiblePipe();
-				pipe->spawnBottomPipe();
-				pipe->spawnTopPipe();
 			}
 		}
 	}
@@ -50,6 +46,17 @@ namespace FlappyBird
 	void GameState::update(float dt)
 	{
 		pipe->movePipes(dt);
+
+		if (clock_.getElapsedTime().asSeconds() > PIPE_SPAWN_FREQUENCY)
+		{
+			std::cout << "Pipe Spawned" << std::endl;
+
+			pipe->spawnInvisiblePipe();
+			pipe->spawnBottomPipe();
+			pipe->spawnTopPipe();
+
+			clock_.restart();
+		}
 	}
 
 	void GameState::draw(float dt)
