@@ -21,7 +21,11 @@ namespace FlappyBird
 		data_->assets.loadTexture("Pipe Up", PIPE_UP_FILEPATH);
 		data_->assets.loadTexture("Pipe Down", PIPE_DOWN_FILEPATH);
 		data_->assets.loadTexture("Land", LAND_FILEPATH);
+
 		data_->assets.loadTexture("Bird Frame 1", BIRD_FRAME_1_FILEPATH);
+		data_->assets.loadTexture("Bird Frame 2", BIRD_FRAME_2_FILEPATH);
+		data_->assets.loadTexture("Bird Frame 3", BIRD_FRAME_3_FILEPATH);
+		data_->assets.loadTexture("Bird Frame 4", BIRD_FRAME_4_FILEPATH);
 
 		pipe = new Pipe(data_);
 		land = new Land(data_);
@@ -64,6 +68,8 @@ namespace FlappyBird
 
 			clock_.restart();
 		}
+
+		bird->animate(dt);
 	}
 
 	void GameState::draw(float dt)

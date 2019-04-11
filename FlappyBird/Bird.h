@@ -6,6 +6,8 @@
 
 #include "Game.h"
 
+#include <vector>
+
 namespace FlappyBird
 { 
 	class Bird
@@ -15,9 +17,17 @@ namespace FlappyBird
 
 		void drawBird();
 
-	private:
-		GameDataRef data_;
+		void animate(float dt);
 
-		sf::Sprite	birdSprite_;
+	private:
+		GameDataRef				 data_;
+
+		sf::Sprite				 birdSprite_;
+
+		std::vector<sf::Texture> animationFrames_;
+
+		unsigned int			 animationIterator_;
+
+		sf::Clock				 clock_;
 	};
 }
