@@ -6,6 +6,7 @@ namespace FlappyBird
 		: data_(data)
 		, animationIterator_(0)
 		, birdState_(BIRD_STATE_STILL)
+		, rotation_(0.f)
 	{
 		animationFrames_.push_back(data_->assets.getTexture("Bird Frame 1"));
 		animationFrames_.push_back(data_->assets.getTexture("Bird Frame 2"));
@@ -14,6 +15,10 @@ namespace FlappyBird
 
 		birdSprite_.setTexture(animationFrames_.at(animationIterator_));
 		birdSprite_.setPosition((data_->window.getSize().x / 4.f) - (birdSprite_.getGlobalBounds().width / 2.f), (data_->window.getSize().y / 2.f) - (birdSprite_.getGlobalBounds().height / 2.f));
+
+		sf::Vector2f origin = sf::Vector2f(birdSprite_.getGlobalBounds().width / 2.f, birdSprite_.getGlobalBounds().height / 2.f);
+
+		birdSprite_.setOrigin(origin);
 	}
 
 	void Bird::drawBird()
@@ -43,10 +48,28 @@ namespace FlappyBird
 		if (BIRD_STATE_FALLING == birdState_)
 		{
 			birdSprite_.move(0, GRAVITY * dt);
+
+			rotation_ += ROTATION_SPEED * dt;
+
+			if (rotation_ > 25.f)
+			{
+				rotation_ = 25.f;
+			}
+
+			birdSprite_.setRotation(rotation_);
 		}
 		else if (BIRD_STATE_FLYING == birdState_)
 		{
 			birdSprite_.move(0, -FLYING_SPEED * dt);
+
+			rotation_ -= ROTATION_SPEED * dt;
+
+			if (rotation_ < -25.f)
+			{
+				rotation_ = -25.f;
+			}
+
+			birdSprite_.setRotation(rotation_);
 		}
 
 		if (movementClock_.getElapsedTime().asSeconds() > FLYING_DURATION)

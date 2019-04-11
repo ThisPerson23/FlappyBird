@@ -29,13 +29,13 @@ namespace FlappyBird
 		sf::Sprite				 birdSprite_;
 
 		std::vector<sf::Texture> animationFrames_;
-
 		unsigned int			 animationIterator_;
 
 		sf::Clock				 clock_;
-
 		sf::Clock				 movementClock_;
 
 		int						 birdState_;
+
+		float					 rotation_;
 	};
 }
