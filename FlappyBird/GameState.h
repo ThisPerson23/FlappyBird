@@ -39,5 +39,7 @@ namespace FlappyBird
 		sf::Clock			clock_;
 
 		int					gameState_;
+
+		int					score_;
 	};
 }
