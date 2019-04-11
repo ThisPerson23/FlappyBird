@@ -11,13 +11,14 @@ namespace FlappyBird
 {
 	GameState::GameState(GameDataRef data)
 		: data_(data)
-		, score_(0)
 		, gameState_(GameStates::eReady)
 	{}
 
 	void GameState::init()
 	{
 		std::cout << "Game State" << std::endl;
+
+		data_->assets.loadFont("Flappy Font", FLAPPY_FONT_FILEPATH);
 
 		data_->assets.loadTexture("Game Background", GAME_BACKGROUND_FILEPATH);
 		data_->assets.loadTexture("Pipe Up", PIPE_UP_FILEPATH);
@@ -34,8 +35,12 @@ namespace FlappyBird
 		land = new Land(data_);
 		bird = new Bird(data_);
 		flash = new Flash(data_);
+		hud = new HUD(data_);
 
 		backgroundSprite_.setTexture(this->data_->assets.getTexture("Game Background"));
+
+		score_ = 0;
+		hud->updateScore(score_);
 	}
 
 	void GameState::handleInput()
@@ -116,7 +121,7 @@ namespace FlappyBird
 					{
 						score_++;
 
-						std::cout << "Score: " << score_ << std::endl;
+						hud->updateScore(score_);
 
 						scoringPipeSprites.erase(scoringPipeSprites.begin() + i);
 					}
@@ -138,6 +143,7 @@ namespace FlappyBird
 		land->drawLand();
 		bird->drawBird();
 		flash->draw();
+		hud->draw();
 		data_->window.display();
 	}
 }

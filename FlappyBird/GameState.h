@@ -9,6 +9,7 @@
 #include "Bird.h"
 #include "Collision.h"
 #include "Flash.h"
+#include "HUD.h"
 
 namespace FlappyBird
 {
@@ -31,10 +32,10 @@ namespace FlappyBird
 		Pipe*				pipe;
 		Land*				land;
 		Bird*				bird;
-		
-		Collision			collision;
-
 		Flash*				flash;
+		HUD*				hud;
+
+		Collision			collision;
 
 		sf::Clock			clock_;
 
