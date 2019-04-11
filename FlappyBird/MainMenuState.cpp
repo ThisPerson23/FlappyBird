@@ -12,9 +12,23 @@ namespace FlappyBird
 		: data_(data)
 	{}
 
+	/*MainMenuState::~MainMenuState()
+	{
+		gameTune_.stop();
+	}
+*/
 	void MainMenuState::init()
 	{
 		std::cout << "Main Menu State" << std::endl;
+
+		/*if (!gameTune_.openFromFile(GAME_MUSIC_FILEPATH))
+		{
+			std::cout << "Error Loading Game Tune Music" << std::endl;
+		}
+		
+		gameTune_.setVolume(10.f);
+		gameTune_.setLoop(true);
+		gameTune_.play();*/
 
 		//Background
 		data_->assets.loadTexture("Main Menu Background", MAIN_MENU_BACKGROUND_FILEPATH);

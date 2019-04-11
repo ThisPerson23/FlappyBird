@@ -1,6 +1,7 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 
 #include "State.h"
 #include "Game.h"
@@ -11,6 +12,7 @@ namespace FlappyBird
 	{
 	public:
 		MainMenuState(GameDataRef data);
+		//~MainMenuState();
 
 		void init();
 
@@ -24,5 +26,7 @@ namespace FlappyBird
 		sf::Sprite	backgroundSprite_;
 		sf::Sprite	titleSprite_;
 		sf::Sprite	playButtonSprite_;
+
+		//sf::Music	gameTune_;
 	};
 }

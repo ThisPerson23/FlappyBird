@@ -41,6 +41,8 @@
 #define POINT_SOUND_FILEPATH "Resources/audio/Point.wav"
 #define WING_SOUND_FILEPATH "Resources/audio/Wing.wav"
 
+#define GAME_MUSIC_FILEPATH "Resources/audio/GameTune.ogg"
+
 #define PIPE_MOVEMENT_SPEED 200.f
 #define PIPE_SPAWN_FREQUENCY 2.f
 

@@ -1,8 +1,10 @@
 #pragma once
 
 #include <map>
+#include <list>
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 
 namespace FlappyBird
 { 
@@ -19,7 +21,7 @@ namespace FlappyBird
 		sf::Font& getFont(std::string name);
 
 	private:
-		std::map<std::string, sf::Texture>  textures_;
-		std::map<std::string, sf::Font>		fonts_;
+		std::map<std::string, sf::Texture>		textures_;
+		std::map<std::string, sf::Font>			fonts_;
 	};
 }
