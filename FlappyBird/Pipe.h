@@ -24,6 +24,8 @@ namespace FlappyBird
 
 		void randomizePipeOffset();
 
+		const std::vector<sf::Sprite>& getSprites() const;
+
 	private:
 		GameDataRef				data_;
 

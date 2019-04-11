@@ -87,7 +87,17 @@ namespace FlappyBird
 
 			for (int i = 0; i < landSprites.size(); i++)
 			{
-				if (collision.checkSpriteCollision(bird->getSprite(), landSprites.at(i)))
+				if (collision.checkSpriteCollision(bird->getSprite(), 0.7f, landSprites.at(i), 1.0f))
+				{
+					gameState_ = GameStates::eGameOver;
+				}
+			}
+
+			std::vector<sf::Sprite> pipeSprites = pipe->getSprites();
+
+			for (int i = 0; i < pipeSprites.size(); i++)
+			{
+				if (collision.checkSpriteCollision(bird->getSprite(), 0.625f, pipeSprites.at(i), 1.0f))
 				{
 					gameState_ = GameStates::eGameOver;
 				}
