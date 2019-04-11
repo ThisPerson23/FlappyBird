@@ -25,10 +25,17 @@
 #define BIRD_FRAME_3_FILEPATH "Resources/res/bird-03.png"
 #define BIRD_FRAME_4_FILEPATH "Resources/res/bird-04.png"
 
-#define FLAPPY_FONT_FILEPATH "Resources/fonts/FlappyFont.ttf"\
+#define FLAPPY_FONT_FILEPATH "Resources/fonts/FlappyFont.ttf"
+
+#define HIGH_SCORES_FILE_PATH "Resources/Highscore.txt"
 
 #define GAME_OVER_TITLE_FILEPATH "Resources/res/Game-Over-Title.png"
 #define GAME_OVER_BODY_FILEPATH "Resources/res/Game-Over-Body.png"
+
+#define BRONZE_MEDAL_FILEPATH "Resources/res/Bronze-Medal.png"
+#define SILVER_MEDAL_FILEPATH "Resources/res/Silver-Medal.png"
+#define GOLD_MEDAL_FILEPATH "Resources/res/Gold-Medal.png"
+#define PLATINUM_MEDAL_FILEPATH "Resources/res/Platinum-Medal.png"
 
 #define PIPE_MOVEMENT_SPEED 200.f
 #define PIPE_SPAWN_FREQUENCY 2.f
@@ -57,4 +64,7 @@ enum GameStates
 
 #define TIME_BEFORE_GAME_OVER_APPEARS 1.5f
 
-#define HIGH_SCORES_FILE_PATH "Resources/Highscore.txt"
+#define BRONZE_MEDAL_SCORE 0
+#define SILVER_MEDAL_SCORE 5
+#define GOLD_MEDAL_SCORE 25
+#define PLATINUM_MEDAL_SCORE 100

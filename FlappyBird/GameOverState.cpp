@@ -49,6 +49,11 @@ namespace FlappyBird
 		data_->assets.loadTexture("Game Over Title", GAME_OVER_TITLE_FILEPATH);
 		data_->assets.loadTexture("Game Over Body", GAME_OVER_BODY_FILEPATH);
 
+		data_->assets.loadTexture("Bronze Medal", BRONZE_MEDAL_FILEPATH);
+		data_->assets.loadTexture("Silver Medal", SILVER_MEDAL_FILEPATH);
+		data_->assets.loadTexture("Gold Medal", GOLD_MEDAL_FILEPATH);
+		data_->assets.loadTexture("Platinum Medal", PLATINUM_MEDAL_FILEPATH);
+
 		backgroundSprite_.setTexture(this->data_->assets.getTexture("Game Over Background"));
 		gameOverTitleSprite_.setTexture(this->data_->assets.getTexture("Game Over Title"));
 		gameOverContainerSprite_.setTexture(this->data_->assets.getTexture("Game Over Body"));
@@ -76,6 +81,25 @@ namespace FlappyBird
 		highScoreText_.setFillColor(sf::Color::White);
 		highScoreText_.setOrigin(highScoreText_.getGlobalBounds().width / 2, highScoreText_.getGlobalBounds().height / 2);
 		highScoreText_.setPosition(data_->window.getSize().x / 10 * 7.25, data_->window.getSize().y / 1.78);
+
+		if (score_ >= PLATINUM_MEDAL_SCORE)
+		{
+			medalSprite_.setTexture(data_->assets.getTexture("Platinum Medal"));
+		}
+		else if (score_ >= GOLD_MEDAL_SCORE)
+		{
+			medalSprite_.setTexture(data_->assets.getTexture("Gold Medal"));
+		}
+		else if (score_ >= SILVER_MEDAL_SCORE)
+		{
+			medalSprite_.setTexture(data_->assets.getTexture("Silver Medal"));
+		}
+		else
+		{
+			medalSprite_.setTexture(data_->assets.getTexture("Bronze Medal"));
+		}
+
+		medalSprite_.setPosition(175, 465);
 	}
 
 	void GameOverState::handleInput()
@@ -108,6 +132,7 @@ namespace FlappyBird
 		data_->window.draw(retryButtonSprite_);
 		data_->window.draw(scoreText_);
 		data_->window.draw(highScoreText_);
+		data_->window.draw(medalSprite_);
 		data_->window.display();
 	}
 }

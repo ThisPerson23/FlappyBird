@@ -26,6 +26,7 @@ namespace FlappyBird
 		sf::Sprite	gameOverTitleSprite_;
 		sf::Sprite	gameOverContainerSprite_;
 		sf::Sprite	retryButtonSprite_;
+		sf::Sprite	medalSprite_;
 
 		sf::Text	scoreText_;
 		sf::Text	highScoreText_;
