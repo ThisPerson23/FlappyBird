@@ -35,11 +35,22 @@ namespace FlappyBird
 			{
 				data_->window.close();
 			}
+
+			if (data_->input.isSpriteClicked(backgroundSprite_, sf::Mouse::Left, data_->window))
+			{
+				std::cout << "Background In Game State Clicked" << std::endl;
+				std::cout << "Pipe Spawned" << std::endl;
+				pipe->spawnInvisiblePipe();
+				pipe->spawnBottomPipe();
+				pipe->spawnTopPipe();
+			}
 		}
 	}
 
 	void GameState::update(float dt)
-	{}
+	{
+		pipe->movePipes(dt);
+	}
 
 	void GameState::draw(float dt)
 	{

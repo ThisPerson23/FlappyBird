@@ -3,6 +3,7 @@
 #include <SFML/Graphics.hpp>
 
 #include "Game.h"
+#include "DEFINITIONS.h"
 
 #include <vector>
 
@@ -12,6 +13,12 @@ namespace FlappyBird
 	{
 	public:
 		Pipe(GameDataRef data);
+
+		void spawnBottomPipe();
+		void spawnTopPipe();
+		void spawnInvisiblePipe();
+
+		void movePipes(float dt);
 
 		void drawPipes();
 
