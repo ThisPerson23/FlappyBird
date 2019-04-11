@@ -52,7 +52,7 @@ namespace FlappyBird
 
 		if (clock_.getElapsedTime().asSeconds() > PIPE_SPAWN_FREQUENCY)
 		{
-			std::cout << "Pipe Spawned" << std::endl;
+			pipe->randomizePipeOffset();
 
 			pipe->spawnInvisiblePipe();
 			pipe->spawnBottomPipe();

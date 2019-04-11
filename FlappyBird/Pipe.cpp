@@ -6,13 +6,15 @@ namespace FlappyBird
 {
 	Pipe::Pipe(GameDataRef data)
 		: data_(data)
+		, pipeSpawnYOffset_(0)
+		, landHeight_(data_->assets.getTexture("Land").getSize().y)
 	{}
 
 	void Pipe::spawnBottomPipe()
 	{
 		sf::Sprite sprite(data_->assets.getTexture("Pipe Up"));
 
-		sprite.setPosition(data_->window.getSize().x, data_->window.getSize().y - sprite.getGlobalBounds().height);
+		sprite.setPosition(data_->window.getSize().x, data_->window.getSize().y - sprite.getGlobalBounds().height - pipeSpawnYOffset_);
 
 		pipeSprites_.push_back(sprite);
 	}
@@ -21,7 +23,7 @@ namespace FlappyBird
 	{
 		sf::Sprite sprite(data_->assets.getTexture("Pipe Down"));
 
-		sprite.setPosition(data_->window.getSize().x, 0.f);
+		sprite.setPosition(data_->window.getSize().x, -pipeSpawnYOffset_);
 
 		pipeSprites_.push_back(sprite);
 	}
@@ -51,8 +53,6 @@ namespace FlappyBird
 				pipeSprites_.at(i).move(-movement, 0.f);
 			}
 		}
-
-		std::cout << pipeSprites_.size() << std::endl;
 	}
 
 	void Pipe::drawPipes()
@@ -61,5 +61,10 @@ namespace FlappyBird
 		{
 			data_->window.draw(pipeSprites_.at(i));
 		}
+	}
+
+	void Pipe::randomizePipeOffset()
+	{
+		pipeSpawnYOffset_ = rand() % (landHeight_ + 1);
 	}
 }
