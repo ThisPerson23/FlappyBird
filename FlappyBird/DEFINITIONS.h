@@ -56,3 +56,5 @@ enum GameStates
 #define FLASH_SPEED 1500.f
 
 #define TIME_BEFORE_GAME_OVER_APPEARS 1.5f
+
+#define HIGH_SCORES_FILE_PATH "Resources/Highscore.txt"

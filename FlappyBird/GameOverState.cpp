@@ -1,5 +1,6 @@
 #include <sstream>
 #include <iostream>
+#include <fstream>
 
 #include "GameOverState.h"
 #include "GameState.h"
@@ -16,6 +17,33 @@ namespace FlappyBird
 	void GameOverState::init()
 	{
 		std::cout << "Game Over State" << std::endl;
+
+		std::ifstream readFile;
+		readFile.open(HIGH_SCORES_FILE_PATH);
+
+		if (readFile.is_open())
+		{
+			while (!readFile.eof())
+			{
+				readFile >> highScore_;
+			}
+		}
+
+		readFile.close();
+
+		std::ofstream writeFile(HIGH_SCORES_FILE_PATH);
+
+		if (writeFile.is_open())
+		{
+			if (score_ > highScore_)
+			{
+				highScore_ = score_;
+			}
+
+			writeFile << highScore_;
+		}
+
+		writeFile.close();
 
 		data_->assets.loadTexture("Game Over Background", GAME_OVER_BACKGROUND_FILEPATH);
 		data_->assets.loadTexture("Game Over Title", GAME_OVER_TITLE_FILEPATH);

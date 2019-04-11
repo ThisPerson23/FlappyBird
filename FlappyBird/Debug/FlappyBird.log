@@ -1,13 +1,68 @@
-﻿  GameOverState.cpp
+﻿  Bird.cpp
 d:\sfml_flappybird\flappybird\flappybird\game.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-d:\sfml_flappybird\flappybird\flappybird\gameoverstate.cpp(33): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-d:\sfml_flappybird\flappybird\flappybird\gameoverstate.cpp(36): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-d:\sfml_flappybird\flappybird\flappybird\gameoverstate.cpp(43): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-d:\sfml_flappybird\flappybird\flappybird\gameoverstate.cpp(50): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Flash.cpp
+d:\sfml_flappybird\flappybird\flappybird\game.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\sfml_flappybird\flappybird\flappybird\flash.cpp(18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+d:\sfml_flappybird\flappybird\flappybird\flash.cpp(22): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+d:\sfml_flappybird\flappybird\flappybird\flash.cpp(30): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+d:\sfml_flappybird\flappybird\flappybird\flash.cpp(34): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  GameOverState.cpp
+d:\sfml_flappybird\flappybird\flappybird\game.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\sfml_flappybird\flappybird\flappybird\gameoverstate.cpp(61): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+d:\sfml_flappybird\flappybird\flappybird\gameoverstate.cpp(64): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+d:\sfml_flappybird\flappybird\flappybird\gameoverstate.cpp(71): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+d:\sfml_flappybird\flappybird\flappybird\gameoverstate.cpp(78): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   GameState.cpp
 d:\sfml_flappybird\flappybird\flappybird\game.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
 d:\sfml_flappybird\flappybird\flappybird\gamestate.cpp(96): warning C4018: '<': signed/unsigned mismatch
 d:\sfml_flappybird\flappybird\flappybird\gamestate.cpp(108): warning C4018: '<': signed/unsigned mismatch
 d:\sfml_flappybird\flappybird\flappybird\gamestate.cpp(122): warning C4018: '<': signed/unsigned mismatch
+  HUD.cpp
+d:\sfml_flappybird\flappybird\flappybird\game.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\sfml_flappybird\flappybird\flappybird\hud.cpp(14): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+  Land.cpp
+d:\sfml_flappybird\flappybird\flappybird\game.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\sfml_flappybird\flappybird\flappybird\land.cpp(30): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+  MainMenuState.cpp
+d:\sfml_flappybird\flappybird\flappybird\game.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Pipe.cpp
+d:\sfml_flappybird\flappybird\flappybird\game.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\sfml_flappybird\flappybird\flappybird\pipe.cpp(17): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+d:\sfml_flappybird\flappybird\flappybird\pipe.cpp(26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+d:\sfml_flappybird\flappybird\flappybird\pipe.cpp(26): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+d:\sfml_flappybird\flappybird\flappybird\pipe.cpp(35): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+d:\sfml_flappybird\flappybird\flappybird\pipe.cpp(45): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+  Source.cpp
+d:\sfml_flappybird\flappybird\flappybird\game.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  SplashState.cpp
+d:\sfml_flappybird\flappybird\flappybird\game.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   Generating Code...
   FlappyBird.vcxproj -> D:\SFML_FlappyBird\FlappyBird\Debug\FlappyBird.exe
