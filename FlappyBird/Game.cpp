@@ -1,10 +1,15 @@
 #include "Game.h"
 #include "SplashState.h"
 
+#include <stdlib.h>
+#include <time.h>
+
 namespace FlappyBird
 {
 	Game::Game(int width, int height, std::string title)
 	{
+		srand(time(NULL));
+
 		data_->window.create(sf::VideoMode(width, height), title, sf::Style::Close | sf::Style::Titlebar);
 
 		data_->machine.addState(StateRef(new SplashState(this->data_)));
