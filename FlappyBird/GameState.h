@@ -8,6 +8,7 @@
 #include "Land.h"
 #include "Bird.h"
 #include "Collision.h"
+#include "Flash.h"
 
 namespace FlappyBird
 {
@@ -23,18 +24,20 @@ namespace FlappyBird
 		void draw(float dt);
 
 	private:
-		GameDataRef data_;
+		GameDataRef			data_;
 
-		sf::Sprite	backgroundSprite_;
+		sf::Sprite			backgroundSprite_;
 
-		Pipe*		pipe;
-		Land*		land;
-		Bird*		bird;
+		Pipe*				pipe;
+		Land*				land;
+		Bird*				bird;
 		
-		Collision	collision;
+		Collision			collision;
 
-		sf::Clock	clock_;
+		Flash*				flash;
 
-		int			gameState_;
+		sf::Clock			clock_;
+
+		int					gameState_;
 	};
 }
