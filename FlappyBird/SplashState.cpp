@@ -1,9 +1,10 @@
 #include <sstream>
+#include <iostream>
 
 #include "SplashState.h"
-#include "DEFINITIONS.h"
+#include "MainMenuState.h"
 
-#include <iostream>
+#include "DEFINITIONS.h"
 
 namespace FlappyBird
 {
@@ -34,7 +35,7 @@ namespace FlappyBird
 	{
 		if (clock_.getElapsedTime().asSeconds() > SPLASH_STATE_SHOW_TIME)
 		{
-			std::cout << "Go To Main Menu" << std::endl;
+			data_->machine.addState(StateRef(new MainMenuState(data_)), true);
 		}
 	}
 

@@ -7,11 +7,11 @@
 
 namespace FlappyBird
 { 
-	class SplashState : public State
+	class MainMenuState : public State
 	{
 	public:
-		SplashState(GameDataRef data);
-		
+		MainMenuState(GameDataRef data);
+
 		void init();
 
 		void handleInput();
@@ -21,8 +21,8 @@ namespace FlappyBird
 	private:
 		GameDataRef data_;
 
-		sf::Clock	clock_;
-
 		sf::Sprite	backgroundSprite_;
+		sf::Sprite	titleSprite_;
+		sf::Sprite	playButtonSprite_;
 	};
 }
