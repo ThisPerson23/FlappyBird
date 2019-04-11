@@ -17,7 +17,11 @@ namespace FlappyBird
 
 		void drawBird();
 
-		void animate(float dt);
+		void animateBird(float dt);
+
+		void updateBird(float dt);
+
+		void tap();
 
 	private:
 		GameDataRef				 data_;
@@ -29,5 +33,9 @@ namespace FlappyBird
 		unsigned int			 animationIterator_;
 
 		sf::Clock				 clock_;
+
+		sf::Clock				 movementClock_;
+
+		int						 birdState_;
 	};
 }

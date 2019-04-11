@@ -47,8 +47,7 @@ namespace FlappyBird
 
 			if (data_->input.isSpriteClicked(backgroundSprite_, sf::Mouse::Left, data_->window))
 			{
-				std::cout << "Background In Game State Clicked" << std::endl;
-				data_->machine.addState(StateRef(new MainMenuState(data_)), true);
+				bird->tap();
 			}
 		}
 	}
@@ -69,7 +68,8 @@ namespace FlappyBird
 			clock_.restart();
 		}
 
-		bird->animate(dt);
+		bird->animateBird(dt);
+		bird->updateBird(dt);
 	}
 
 	void GameState::draw(float dt)
