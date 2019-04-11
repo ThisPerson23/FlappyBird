@@ -23,6 +23,8 @@ namespace FlappyBird
 
 		void tap();
 
+		const sf::Sprite& getSprite() const;
+
 	private:
 		GameDataRef				 data_;
 

@@ -41,4 +41,9 @@ namespace FlappyBird
 			data_->window.draw(landSprites_.at(i));
 		}
 	}
+
+	const std::vector<sf::Sprite>& Land::getSprites() const
+	{
+		return landSprites_;
+	}
 }

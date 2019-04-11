@@ -86,4 +86,9 @@ namespace FlappyBird
 
 		birdState_ = BIRD_STATE_FLYING;
 	}
+
+	const sf::Sprite & Bird::getSprite() const
+	{
+		return birdSprite_;
+	}
 }

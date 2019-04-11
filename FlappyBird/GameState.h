@@ -7,6 +7,7 @@
 #include "Pipe.h"
 #include "Land.h"
 #include "Bird.h"
+#include "Collision.h"
 
 namespace FlappyBird
 {
@@ -26,10 +27,14 @@ namespace FlappyBird
 
 		sf::Sprite	backgroundSprite_;
 
-		Pipe* pipe;
-		Land* land;
-		Bird* bird;
+		Pipe*		pipe;
+		Land*		land;
+		Bird*		bird;
+		
+		Collision	collision;
 
-		sf::Clock clock_;
+		sf::Clock	clock_;
+
+		int			gameState_;
 	};
 }
