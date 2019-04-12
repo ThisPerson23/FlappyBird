@@ -27,6 +27,7 @@
 #define BIRD_FRAME_4_FILEPATH "Resources/res/bird-04.png"
 
 #define FLAPPY_FONT_FILEPATH "Resources/fonts/FlappyFont.ttf"
+#define MARKER_FELT_FONT_FILEPATH "Resources/fonts/MarkerFelt.ttf"
 
 #define HIGH_SCORES_FILE_PATH "Resources/Highscore.txt"
 

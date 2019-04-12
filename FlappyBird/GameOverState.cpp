@@ -4,6 +4,7 @@
 
 #include "GameOverState.h"
 #include "GameState.h"
+#include "MainMenuState.h"
 
 #include "DEFINITIONS.h"
 
@@ -16,6 +17,7 @@ namespace FlappyBird
 
 	void GameOverState::init()
 	{
+		//Debug
 		std::cout << "Game Over State" << std::endl;
 
 		std::ifstream readFile;
@@ -45,6 +47,8 @@ namespace FlappyBird
 
 		writeFile.close();
 
+		data_->assets.loadFont("Marker Felt", MARKER_FELT_FONT_FILEPATH);
+
 		data_->assets.loadTexture("Game Over Background", GAME_OVER_BACKGROUND_FILEPATH);
 		data_->assets.loadTexture("Game Over Title", GAME_OVER_TITLE_FILEPATH);
 		data_->assets.loadTexture("Game Over Body", GAME_OVER_BODY_FILEPATH);
@@ -67,6 +71,14 @@ namespace FlappyBird
 
 		retryButtonSprite_.setPosition((data_->window.getSize().x / 2) - (retryButtonSprite_.getGlobalBounds().width / 2),
 										gameOverContainerSprite_.getPosition().y + gameOverContainerSprite_.getGlobalBounds().height + (retryButtonSprite_.getGlobalBounds().height * 0.2));
+
+		returnToMenuText_.setFont(data_->assets.getFont("Marker Felt"));
+		returnToMenuText_.setString("Press Escape to Return to Menu");
+		returnToMenuText_.setCharacterSize(56);
+		returnToMenuText_.setFillColor(sf::Color::White);
+		returnToMenuText_.setOrigin(returnToMenuText_.getGlobalBounds().width / 2, returnToMenuText_.getGlobalBounds().height / 2);
+		returnToMenuText_.setPosition(data_->window.getSize().x / 2,
+			retryButtonSprite_.getPosition().y + retryButtonSprite_.getGlobalBounds().height + (returnToMenuText_.getGlobalBounds().height * 1.2));
 
 		scoreText_.setFont(data_->assets.getFont("Flappy Font"));
 		scoreText_.setString(std::to_string(score_));
@@ -117,6 +129,11 @@ namespace FlappyBird
 			{
 				data_->machine.addState(StateRef(new GameState(data_)), true);
 			}
+
+			if (sf::Event::KeyPressed == event.type && event.key.code == sf::Keyboard::Escape)
+			{
+				data_->machine.addState(StateRef(new MainMenuState(data_)), true);
+			}
 		}
 	}
 
@@ -133,6 +150,7 @@ namespace FlappyBird
 		data_->window.draw(scoreText_);
 		data_->window.draw(highScoreText_);
 		data_->window.draw(medalSprite_);
+		data_->window.draw(returnToMenuText_);
 		data_->window.display();
 	}
 }

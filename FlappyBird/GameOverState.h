@@ -31,6 +31,8 @@ namespace FlappyBird
 		sf::Text	scoreText_;
 		sf::Text	highScoreText_;
 
+		sf::Text	returnToMenuText_;
+
 		int			score_;
 		int			highScore_;
 	};
