@@ -12,11 +12,6 @@ namespace FlappyBird
 		: data_(data)
 	{}
 
-	/*MainMenuState::~MainMenuState()
-	{
-		gameTune_.stop();
-	}
-*/
 	void MainMenuState::init()
 	{
 		std::cout << "Main Menu State" << std::endl;
