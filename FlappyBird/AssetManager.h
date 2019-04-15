@@ -6,12 +6,14 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 
+#include "DEFINITIONS.h"
+
 namespace FlappyBird
 { 
 	class AssetManager
 	{
 	public:
-		AssetManager() : isMusicPaused_(false) { this->music_["Game Tune"] = "Resources/audio/GameTune.ogg"; };
+		AssetManager() : isMusicPaused_(false) { this->music_["Game Tune"] = GAME_MUSIC_FILEPATH; };
 		~AssetManager() { };
 
 		void loadTexture(std::string name, std::string fileName);
