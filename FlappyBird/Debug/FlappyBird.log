@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-﻿  FlappyBird.vcxproj -> D:\SFML_FlappyBird\Debug\FlappyBird.exe
-=======
-﻿  Bird.cpp
+﻿  AssetManager.cpp
+  Bird.cpp
 d:\sfml_flappybird\flappybird\flappybird\game.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   Flash.cpp
 d:\sfml_flappybird\flappybird\flappybird\game.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
@@ -9,6 +7,9 @@ d:\sfml_flappybird\flappybird\flappybird\flash.cpp(18): warning C4244: 'initiali
 d:\sfml_flappybird\flappybird\flappybird\flash.cpp(22): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 d:\sfml_flappybird\flappybird\flappybird\flash.cpp(30): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
 d:\sfml_flappybird\flappybird\flappybird\flash.cpp(34): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Game.cpp
+d:\sfml_flappybird\flappybird\flappybird\game.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\sfml_flappybird\flappybird\flappybird\game.cpp(11): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   GameOverState.cpp
 d:\sfml_flappybird\flappybird\flappybird\game.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
 d:\sfml_flappybird\flappybird\flappybird\gameoverstate.cpp(70): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
@@ -23,9 +24,9 @@ d:\sfml_flappybird\flappybird\flappybird\gameoverstate.cpp(88): warning C4244: '
 d:\sfml_flappybird\flappybird\flappybird\gameoverstate.cpp(95): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   GameState.cpp
 d:\sfml_flappybird\flappybird\flappybird\game.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-d:\sfml_flappybird\flappybird\flappybird\gamestate.cpp(144): warning C4018: '<': signed/unsigned mismatch
-d:\sfml_flappybird\flappybird\flappybird\gamestate.cpp(160): warning C4018: '<': signed/unsigned mismatch
-d:\sfml_flappybird\flappybird\flappybird\gamestate.cpp(178): warning C4018: '<': signed/unsigned mismatch
+d:\sfml_flappybird\flappybird\flappybird\gamestate.cpp(145): warning C4018: '<': signed/unsigned mismatch
+d:\sfml_flappybird\flappybird\flappybird\gamestate.cpp(161): warning C4018: '<': signed/unsigned mismatch
+d:\sfml_flappybird\flappybird\flappybird\gamestate.cpp(179): warning C4018: '<': signed/unsigned mismatch
   HUD.cpp
 d:\sfml_flappybird\flappybird\flappybird\game.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
 d:\sfml_flappybird\flappybird\flappybird\hud.cpp(14): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
@@ -75,4 +76,3 @@ d:\sfml_flappybird\flappybird\flappybird\game.h(4): warning C4067: unexpected to
 d:\sfml_flappybird\flappybird\flappybird\game.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   Generating Code...
   FlappyBird.vcxproj -> D:\SFML_FlappyBird\FlappyBird\Debug\FlappyBird.exe
->>>>>>> 17aa2ce689f6c7c99fde5074182c341566f5688a

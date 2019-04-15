@@ -51,9 +51,4 @@ namespace FlappyBird
 	{
 		return this->isMusicPaused_;
 	}
-
-	/*void AssetManager::playMusic(std::string name)
-	{
-		if (!music_.openFro)
-	}*/
 }

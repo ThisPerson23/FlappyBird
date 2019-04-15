@@ -11,7 +11,7 @@ namespace FlappyBird
 	class AssetManager
 	{
 	public:
-		AssetManager() { this->music_["Game Tune"] = "Resources/audio/GameTune.ogg"; };
+		AssetManager() : isMusicPaused_(false) { this->music_["Game Tune"] = "Resources/audio/GameTune.ogg"; };
 		~AssetManager() { };
 
 		void loadTexture(std::string name, std::string fileName);
@@ -22,7 +22,6 @@ namespace FlappyBird
 
 		void loadMusic(std::string name, std::string fileName);
 		std::string getMusic(std::string name);
-		/*void playMusic(std::string name);*/
 
 		void setIsMusicPaused(bool isPaused);
 		bool getIsMusicPaused() const;
