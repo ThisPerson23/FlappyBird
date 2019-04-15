@@ -1,5 +1,6 @@
 #include <sstream>
 #include <iostream>
+#include <vector>
 
 #include "GameState.h"
 #include "GameOverState.h"
